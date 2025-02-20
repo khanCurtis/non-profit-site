@@ -1,0 +1,109 @@
+/*Start Navbar*/
+:root {
+  --nav-icon-width: 50px;
+  --nav-border-width: 8px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  font-family: sans-serif;
+  background-image: url("");	
+}
+
+.page-container {
+  height: inherit;
+  display: flex;
+}
+
+.main {
+  height: inherit;
+  padding-right: 30px;
+  padding-left: var(--nav-border-width);
+  overflow-y: auto;
+}
+
+.nav {
+  width: 200px;
+  height: inherit;
+  position: relative;
+  background-color: MintCream; /*Bg color for nav bar*/
+  transition: width 0.2s;
+  flex-shrink: 0;
+}
+
+.nav--collapsed {
+  width: var(--nav-icon-width);
+}
+
+.nav--collapsed .nav__label {
+  display: none;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  color: black; /*nav bar icon and name color*/
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  background-color: gray;
+}
+
+.nav__icon-container {
+  width: var(--nav-icon-width);
+  height: var(--nav-icon-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav__label {
+  white-space: nowrap;
+}
+
+.nav__border {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: var(--nav-border-width);
+  height: inherit;
+  background-color: black; /*color of the nav border*/
+  transition: background-color 0.2s;
+  cursor: ew-resize;
+}
+
+.nav__border:hover {
+  background-color: red;
+}
+
+
+h1 {
+	margin-left: 30%;
+	position: fixed;
+	/*below position and margin is purely styling for the nav, not needed for it to function at all*/
+	color: #00FA9A;
+	font-family: Lucida Handwriting, cursive;
+	letter-spacing: 3px;
+	text-align: center;
+	background-color: MintCream;
+	text-shadow: 5px 5px 10px #FFD700;
+	border-style: groove;
+	border-width: 10px;
+	border-color: #9370DB;
+	padding: 20px;
+	height: 80px;
+	}
+	
+	
+nav {
+	color: #00FA9A;
+	font-family: Lucida Handwriting, cursive;
+	text-align: center;
+	background-color: MintCream;
+	text-shadow: 5px 5px 10px #FFD700;
+}
+/*End Navbar*/
