@@ -1,109 +1,87 @@
-/*Start Navbar*/
-:root {
-  --nav-icon-width: 50px;
-  --nav-border-width: 8px;
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    flex-direction: column; /* Stack logo and links vertically */
+    align-items: center; /* Center everything horizontally */
+    padding: 10px 20px;
+    background: #f58220; /* Add orange background color */
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0px;
-  font-family: sans-serif;
-  background-image: url("");	
+.navbar-brand {
+    margin-bottom: 10px; /* Add space between logo and links */
 }
 
-.page-container {
-  height: inherit;
-  display: flex;
+.navbar-brand img {
+    width: 120px; /* Set logo width */
+    height: auto; /* Maintain aspect ratio */
 }
 
-.main {
-  height: inherit;
-  padding-right: 30px;
-  padding-left: var(--nav-border-width);
-  overflow-y: auto;
+.navbar-collapse {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    width: 100%;
 }
 
-.nav {
-  width: 200px;
-  height: inherit;
-  position: relative;
-  background-color: MintCream; /*Bg color for nav bar*/
-  transition: width 0.2s;
-  flex-shrink: 0;
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav--collapsed {
-  width: var(--nav-icon-width);
+.nav-item {
+    margin: 0 10px; /* Add spacing between links */
 }
 
-.nav--collapsed .nav__label {
-  display: none;
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-.nav__link {
-  display: flex;
-  align-items: center;
-  color: black; /*nav bar icon and name color*/
-  text-decoration: none;
+.nav-link.active {
+    font-weight: bold;
 }
 
-.nav__link:hover {
-  background-color: gray;
+.nav-toggle {
+    display: none;
 }
 
-.nav__icon-container {
-  width: var(--nav-icon-width);
-  height: var(--nav-icon-width);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
 }
 
-.nav__label {
-  white-space: nowrap;
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-toggle-label {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
 
-.nav__border {
-  position: absolute;
-  left: 100%;
-  top: 0;
-  width: var(--nav-border-width);
-  height: inherit;
-  background-color: black; /*color of the nav border*/
-  transition: background-color 0.2s;
-  cursor: ew-resize;
-}
+    .navbar-collapse {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background: #f58220; /* Ensure mobile menu has orange background */
+        position: absolute;
+        top: 80px;
+        left: 0;
+    }
 
-.nav__border:hover {
-  background-color: red;
-}
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .nav-item {
+        margin: 10px 0;
+    }
 
-h1 {
-	margin-left: 30%;
-	position: fixed;
-	/*below position and margin is purely styling for the nav, not needed for it to function at all*/
-	color: #00FA9A;
-	font-family: Lucida Handwriting, cursive;
-	letter-spacing: 3px;
-	text-align: center;
-	background-color: MintCream;
-	text-shadow: 5px 5px 10px #FFD700;
-	border-style: groove;
-	border-width: 10px;
-	border-color: #9370DB;
-	padding: 20px;
-	height: 80px;
-	}
-	
-	
-nav {
-	color: #00FA9A;
-	font-family: Lucida Handwriting, cursive;
-	text-align: center;
-	background-color: MintCream;
-	text-shadow: 5px 5px 10px #FFD700;
+    .nav-toggle:checked ~ .navbar-collapse {
+        display: flex;
+    }
 }
-/*End Navbar*/
