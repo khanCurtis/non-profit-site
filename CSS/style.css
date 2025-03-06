@@ -85,3 +85,23 @@
         display: flex;
     }
 }
+/*END NAVBAR*/
+
+/*FOOTER START*/
+.footer {
+    display: flex;
+    flex-direction: column; /* Stack logo and links vertically */
+    align-items: center; /* Center everything horizontally */
+    padding: 10px 20px;
+    background: #3d3d3e; /* Add grey background color */
+}
+
+/*END FOOTER*/
+
+p {
+    font-size: 26px;
+}
+
+.images {
+    padding: 125px;
+}
