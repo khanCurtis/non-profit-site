@@ -118,6 +118,101 @@
         </div>
     </div>
 </section>
+
+<section class="adoption-form-section" style="margin: 60px 0; padding: 40px 20px; background-color: #f5f5f5;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+        <h2 style="text-align: center; margin-bottom: 30px; font-size: 2rem; color: #333;">Adoption Application Form</h2>
+        <p style="text-align: center; margin-bottom: 30px; color: #666;">Complete the form below to begin your adoption journey. Our team will contact you within 48 hours.</p>
+        
+        <form id="adoptionForm" style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <div style="margin-bottom: 20px;">
+                <label for="fullName" style="display: block; margin-bottom: 8px; font-weight: bold;">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;" required>
+                <span id="nameError" class="error" style="color: red; font-size: 14px; display: none;">Please enter your full name</span>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="email" style="display: block; margin-bottom: 8px; font-weight: bold;">Email Address *</label>
+                <input type="email" id="email" name="email" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;" required>
+                <span id="emailError" class="error" style="color: red; font-size: 14px; display: none;">Please enter a valid email address</span>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="phone" style="display: block; margin-bottom: 8px; font-weight: bold;">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;" required>
+                <span id="phoneError" class="error" style="color: red; font-size: 14px; display: none;">Please enter a valid phone number</span>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="address" style="display: block; margin-bottom: 8px; font-weight: bold;">Home Address *</label>
+                <textarea id="address" name="address" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; height: 80px;" required></textarea>
+                <span id="addressError" class="error" style="color: red; font-size: 14px; display: none;">Please enter your address</span>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="petType" style="display: block; margin-bottom: 8px; font-weight: bold;">Type of Pet Interested In *</label>
+                <select id="petType" name="petType" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;" required>
+                    <option value="">-- Select One --</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="bird">Bird</option>
+                    <option value="other">Other</option>
+                </select>
+                <span id="petTypeError" class="error" style="color: red; font-size: 14px; display: none;">Please select a pet type</span>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="location" style="display: block; margin-bottom: 8px; font-weight: bold;">Preferred Location *</label>
+                <select id="location" name="location" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;" required>
+                    <option value="">-- Select One --</option>
+                    <option value="kanab">Kanab, Utah</option>
+                    <option value="los-angeles">Los Angeles, CA</option>
+                    <option value="salt-lake">Salt Lake City, UT</option>
+                    <option value="houston">Houston, TX</option>
+                    <option value="nyc">New York City, NY</option>
+                    <option value="arkansas">Northwest Arkansas</option>
+                </select>
+                <span id="locationError" class="error" style="color: red; font-size: 14px; display: none;">Please select a location</span>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="experience" style="display: block; margin-bottom: 8px; font-weight: bold;">Previous Pet Experience</label>
+                <textarea id="experience" name="experience" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; height: 100px;"></textarea>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">Housing Situation *</label>
+                <div style="margin-bottom: 10px;">
+                    <input type="radio" id="house" name="housing" value="house" required>
+                    <label for="house" style="margin-left: 5px;">House</label>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <input type="radio" id="apartment" name="housing" value="apartment">
+                    <label for="apartment" style="margin-left: 5px;">Apartment</label>
+                </div>
+                <div>
+                    <input type="radio" id="other" name="housing" value="other">
+                    <label for="other" style="margin-left: 5px;">Other</label>
+                </div>
+                <span id="housingError" class="error" style="color: red; font-size: 14px; display: none;">Please select your housing situation</span>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" style="margin-left: 5px;">I agree to the terms and conditions *</label>
+                <span id="termsError" class="error" style="color: red; font-size: 14px; display: none;">You must agree to the terms</span>
+            </div>
+            
+            <div style="text-align: center;">
+                <button type="submit" id="submitBtn" style="background-color: #000; color: white; border: none; padding: 12px 30px; border-radius: 4px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Submit Application</button>
+            </div>
+            
+            <div id="formSuccess" style="margin-top: 20px; padding: 15px; background-color: #d4edda; color: #155724; border-radius: 4px; display: none;">
+                Thank you for your application! We will contact you within 48 hours.
+            </div>
+        </form>
+    </div>
+</section>
   
         <footer>
                 <div class="tm-main-content" id="top">  
@@ -150,6 +245,111 @@
                         </nav>  
                     </div>  
                 </div>
-            </footer> 
+            </footer>
+
+            <script src="../JavaScript/responsive.js"></script>
+            <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('adoptionForm');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    function validateForm(e) {
+        e.preventDefault();
+        let isValid = true;
+        
+        const errorElements = document.querySelectorAll('.error');
+        errorElements.forEach(el => el.style.display = 'none');
+        
+        const nameInput = document.getElementById('fullName');
+        if (!nameInput.value.trim()) {
+            document.getElementById('nameError').style.display = 'block';
+            isValid = false;
+        }
+        
+        const emailInput = document.getElementById('email');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailInput.value.trim())) {
+            document.getElementById('emailError').style.display = 'block';
+            isValid = false;
+        }
+        
+        const phoneInput = document.getElementById('phone');
+        const phonePattern = /^\d{10,}$/;
+        if (!phonePattern.test(phoneInput.value.replace(/\D/g, ''))) {
+            document.getElementById('phoneError').style.display = 'block';
+            isValid = false;
+        }
+        
+        const addressInput = document.getElementById('address');
+        if (!addressInput.value.trim()) {
+            document.getElementById('addressError').style.display = 'block';
+            isValid = false;
+        }
+        
+        const petTypeInput = document.getElementById('petType');
+        if (!petTypeInput.value) {
+            document.getElementById('petTypeError').style.display = 'block';
+            isValid = false;
+        }
+        
+        const locationInput = document.getElementById('location');
+        if (!locationInput.value) {
+            document.getElementById('locationError').style.display = 'block';
+            isValid = false;
+        }
+        
+        const housingInputs = document.querySelectorAll('input[name="housing"]');
+        let housingSelected = false;
+        housingInputs.forEach(input => {
+            if (input.checked) housingSelected = true;
+        });
+        if (!housingSelected) {
+            document.getElementById('housingError').style.display = 'block';
+            isValid = false;
+        }
+        
+        const termsInput = document.getElementById('terms');
+        if (!termsInput.checked) {
+            document.getElementById('termsError').style.display = 'block';
+            isValid = false;
+        }
+        
+        if (isValid) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            setTimeout(function() {
+                document.getElementById('formSuccess').style.display = 'block';
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Application';
+                
+                document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth' });
+            }, 1500);
+        }
+    }
+    
+    form.addEventListener('submit', validateForm);
+    
+    const emailInput = document.getElementById('email');
+    emailInput.addEventListener('blur', function() {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(this.value.trim()) && this.value.trim() !== '') {
+            document.getElementById('emailError').style.display = 'block';
+        } else {
+            document.getElementById('emailError').style.display = 'none';
+        }
+    });
+    
+    submitBtn.addEventListener('mouseover', function() {
+        this.style.backgroundColor = '#333';
+    });
+    
+    submitBtn.addEventListener('mouseout', function() {
+        this.style.backgroundColor = '#000';
+    });
+});
+            </script>
+
 </body>  
 </html>  

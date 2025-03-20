@@ -40,7 +40,7 @@
 }
 
 .nav-link.active {
-    font-weight: bold;
+font-weight    font-weight: bold;
 }
 
 .nav-toggle {
@@ -50,6 +50,22 @@
 .nav-toggle-label {
     display: none;
     cursor: pointer;
+}
+
+/* Bold styling for active navigation link */
+.nav-link.active {
+    font-weight: 700; 
+    color: #fff; 
+    text-decoration: underline; 
+    text-underline-offset: 4px;
+}
+
+/* For the footer active links */
+.footer .nav-link.active {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 /* Responsive Styles */
@@ -102,6 +118,314 @@ p {
     font-size: 26px;
 }
 
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* header */
+.tm-about-text-wrap img {
+    width: 100%;
+    height: auto;
+}
+
+/* For the flex images */
 .images {
-    padding: 125px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto; /* Centers the image in its container */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Adjust the flex container for better mobile display */
+    div[style*="display: flex"] {
+        flex-direction: column;
+    }
+    
+    div[style*="display: flex"] > div {
+        margin: 15px 0;
+    }
+    
+    /* Ensure text is readable on smaller screens */
+    div[style*="flex: 1; text-align: center;"] p {
+        padding: 0 15px;
+    }
+}
+
+/* responsive text */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Fix flex containers with images and text */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    gap: 20px; /* Adds space between flex items */
+}
+
+.flex-item {
+    flex: 1 1 300px; /* Base width of 300px, but can grow and shrink */
+    min-width: 300px; /* Ensures items don't get too small */
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.flex-item p {
+    padding: 0 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.flex-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Center section styles */
+.center-content {
+    text-align: center;
+    margin: 20px auto;
+    padding: 50px 20px; /* Reduced padding on smaller screens */
+    max-width: 1200px;
+}
+
+.center-content h1 {
+    margin-bottom: 20px;
+}
+
+/* Media queries for different screen sizes */
+@media screen and (max-width: 1200px) {
+    .flex-container {
+        padding: 0 15px;
+    }
+    
+    .center-content {
+        padding: 40px 15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    .center-content {
+        padding: 30px 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Stack flex items on smaller screens */
+    .flex-item {
+        flex: 1 1 100%;
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Adjust text size for smaller screens */
+    body {
+        font-size: 15px;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    .center-content {
+        padding: 25px 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 1.4rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+    
+    .center-content {
+        padding: 20px 10px;
+    }
+}
+
+/* Banner image */
+.banner-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Two column image gallery */
+.image-gallery-section {
+    padding: 20px 0;
+}
+
+.dual-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 15px;
+}
+
+.image-item {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 300px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Content blocks with image and text */
+.content-section {
+    padding: 30px 0;
+}
+
+.content-block {
+    margin-bottom: 40px;
+}
+
+.media-text-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.media-text-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.media-container {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+.text-container {
+    flex: 1 1 45%;
+    min-width: 300px;
+    padding: 20px 0;
+}
+
+.content-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.text-container p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+    .dual-image-container {
+        gap: 15px;
+    }
+    
+    .media-text-container {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dual-image-container {
+        flex-direction: column;
+    }
+    
+    .media-text-container, 
+    .media-text-container.reverse {
+        flex-direction: column;
+    }
+    
+    .media-container {
+        width: 100%;
+    }
+    
+    .text-container {
+        width: 100%;
+        padding: 15px 0;
+    }
+    
+    .content-block {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .image-gallery-section, 
+    .content-section {
+        padding: 15px 0;
+    }
+    
+    .content-block {
+        margin-bottom: 20px;
+    }
+    
+    .text-container p {
+        font-size: 0.95rem;
+    }
 }

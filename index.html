@@ -17,7 +17,7 @@
             <div class="container">  
                 <nav class="navbar">  
                     <a class="navbar-brand" href="#">  
-                        <img src="Media/best_friends.png" alt="Best Friends" width="100%">  
+                        <img src="Media/best_friends.png" alt="Best Friends">  
                     </a>  
                     <input type="checkbox" id="nav-toggle" class="nav-toggle">  
                     <label for="nav-toggle" class="nav-toggle-label">  
@@ -37,48 +37,70 @@
             </div>  
         </div>  
   
+        <!-- Banner image section -->
         <section class="tm-container-outer tm-bg-gray p-5">  
             <div class="container">  
                 <div class="row">  
                     <div class="col-xs-12 mx-auto tm-about-text-wrap text-center">  
-                        <img src="Media/catLookingUpHead.jpg" width="100%">  
+                        <img src="Media/catLookingUpHead.jpg" alt="Cat banner image" class="banner-image">  
                     </div>  
                 </div>  
             </div>  
         </section> 
-        <section>
-                <div>
-                    <img class="images" src="Media/dog.jpg" width="700">
-                    <img class="images" style="float: right;" src="Media/catLookingUp.jpg" width="700">
+        
+        <!-- Two column image section -->
+        <section class="image-gallery-section">
+            <div class="dual-image-container">
+                <div class="image-item">
+                    <img class="gallery-image" src="Media/dog.jpg" alt="Dog">
                 </div>
-        </section>
-        <section>
-            <div style="display: flex; align-items: center;">
-                <img class="images" src="Media/cat.jpg" width="700">
-                <p style="margin-left: 20px;">At Best Friends Animal Sanctuary, every animal has a story and a chance for a happy ending. Nestled in the heart of nature, our sanctuary is a refuge for countless animals seeking a fresh start. Our dedicated team works tirelessly to provide food, medical care, and companionship, ensuring that each resident feels safe and loved.
-
-Our mission extends beyond just care; it's about creating a community of compassion. Through educational programs and volunteer opportunities, we invite you to join us in advocating for animal welfare. Together, we can create a world where every animal is cherished and respected. (this text is AI generated)</p>
+                <div class="image-item">
+                    <img class="gallery-image" src="Media/catLookingUp.jpg" alt="Cat looking up">
+                </div>
             </div>
-            <div style="display: flex; align-items: center;">
-                    <p style="margin-right: 20px;">Volunteering at Best Friends Animal Sanctuary offers a rewarding experience unlike any other. Every day, our volunteers make a tangible impact, whether it's through walking dogs, socializing cats, or helping with administrative tasks. By joining our team, you become a crucial part of our mission to provide a loving environment for all animals.
-
-Our sanctuary thrives on the generosity of people like you. Your support, whether through donations or spreading the word, helps us maintain a safe and nurturing space for animals in need. Together, we can continue to rescue, rehabilitate, and rehome countless animals, ensuring they find the loving families they deserve..</p>
-                    <img class="images" src="Media/multiColoredCat.jpg" width="700">
-
+        </section>
+        
+        <!-- Image with text sections -->
+        <section class="content-section">
+            <!-- First content block -->
+            <div class="content-block">
+                <div class="media-text-container">
+                    <div class="media-container">
+                        <img class="content-image" src="Media/cat.jpg" alt="Cat">
+                    </div>
+                    <div class="text-container">
+                        <p>At Best Friends Animal Sanctuary, every animal has a story and a chance for a happy ending. Nestled in the heart of nature, our sanctuary is a refuge for countless animals seeking a fresh start. Our dedicated team works tirelessly to provide food, medical care, and companionship, ensuring that each resident feels safe and loved.</p>
+                        <p>Our mission extends beyond just care; it's about creating a community of compassion. Through educational programs and volunteer opportunities, we invite you to join us in advocating for animal welfare. Together, we can create a world where every animal is cherished and respected.</p>
+                    </div>
                 </div>
+            </div>
+            
+            <!-- Second content block -->
+            <div class="content-block">
+                <div class="media-text-container">
+                    <div class="text-container">
+                        <p>Volunteering at Best Friends Animal Sanctuary offers a rewarding experience unlike any other. Every day, our volunteers make a tangible impact, whether it's through walking dogs, socializing cats, or helping with administrative tasks. By joining our team, you become a crucial part of our mission to provide a loving environment for all animals.</p>
+                        <p>Our sanctuary thrives on the generosity of people like you. Your support, whether through donations or spreading the word, helps us maintain a safe and nurturing space for animals in need. Together, we can continue to rescue, rehabilitate, and rehome countless animals, ensuring they find the loving families they deserve.</p>
+                    </div>
+                    <div class="media-container">
+                        <img class="content-image" src="Media/multiColoredCat.jpg" alt="Multi-colored cat">
+                    </div>
+                </div>
+            </div>
         </section>
   
+        <!-- Footer -->
         <footer>
-                <div class="tm-main-content" id="top">  
+            <div class="tm-main-content" id="top">  
                 <div class="tm-top-bar" id="tm-top-bar">  
                     <div class="container">  
                         <nav class="footer">  
                             <a class="navbar-brand" href="#">  
-                                <img src="Media/best_friends.png" alt="Best Friends" width="60">  
+                                <img src="Media/best_friends.png" alt="Best Friends">  
                             </a>  
                             <input type="checkbox" id="nav-toggle" class="nav-toggle">  
                             <label for="nav-toggle" class="nav-toggle-label">  
-                            <span></span>  
+                                <span></span>  
                             </label>  
                             <div class="navbar-collapse">  
                                 <ul class="navbar-nav">  
@@ -91,7 +113,7 @@ Our sanctuary thrives on the generosity of people like you. Your support, whethe
                                     <li class="nav-item">  
                                         <a class="nav-link active" href="Pages/privPolicy.html">Privacy Policy</a>  
                                     </li>
-<li class="nav-item">  
+                                    <li class="nav-item">  
                                         <a class="nav-link active" href="Pages/tos.html">Terms & Conditions</a>  
                                     </li>
                                 </ul>  
@@ -99,6 +121,9 @@ Our sanctuary thrives on the generosity of people like you. Your support, whethe
                         </nav>  
                     </div>  
                 </div>
-            </footer> 
+            </div>
+        </footer>
+        <script src="JavaScript/responsive.js"></script>
+    </div>
 </body>  
-</html>  
+</html>
